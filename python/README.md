@@ -2,8 +2,8 @@
 
 ## **Table of Contents**
 
--|------
 #|Title
+-|------
 1| [Challenge 1](challenge_1.md)
 2| 
 3|
