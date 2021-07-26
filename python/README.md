@@ -5,7 +5,7 @@
 #|Title
 -|------
 1| [Challenge 1](challenge_1.md)
-2| 
+2| [Challenge 2](challenge2.md)
 3|
 4|
 5|
