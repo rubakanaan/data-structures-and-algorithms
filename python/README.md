@@ -6,7 +6,7 @@
 -|------
 1| [Challenge 1](challenge_1.md)
 2| [Challenge 2](challenge2.md)
-3|
+3|[Challenge 3](challenge3.md)
 4|
 5|
 6|
