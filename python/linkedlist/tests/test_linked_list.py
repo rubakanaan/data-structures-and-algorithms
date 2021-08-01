@@ -46,6 +46,47 @@ def test_to_string():
     ruba.insert('kanaan')
     assert str(ruba) == '{kanaan} ->{ruba} ->Null'
 
+def test_append():
+  ruba = LinkedList()
+  ruba.insert('ruba')
+  ruba.append('kanaan')
+  assert str(ruba) == '{ruba} ->{kanaan} ->Null'
+
+def test_multiple_append():
+  ruba = LinkedList()
+  ruba.insert('ruba')
+  ruba.append('J')
+  ruba.append('kanaan')
+  assert str(ruba) == '{ruba} ->{J} ->{kanaan} ->Null'
+
+def test_insert_before():
+  ruba = LinkedList()
+  ruba.insert('ruba')
+  ruba.append('kanaan')
+  ruba.insert_before('kanaan','J')
+  assert str(ruba)== '{ruba} ->{J} ->{kanaan} ->Null'
+
+def test_insert_before_first():
+  ruba = LinkedList()
+  ruba.insert('ruba')
+  ruba.insert_before('ruba','I\'m')
+  assert str(ruba)== '{I\'m} ->{ruba} ->Null'
+
+def test_inser_after():
+  ruba = LinkedList()
+  ruba.insert('ruba')
+  ruba.append('kanaan')
+  ruba.insert_after('ruba','J')
+  assert str(ruba)== "{ruba} ->{J} ->{kanaan} ->Null"
+
+def test_inser_after_last():
+  ruba = LinkedList()
+  ruba.insert('ruba')
+  ruba.insert_after('ruba','kanaan')
+  assert str(ruba)== '{ruba} ->{kanaan} ->Null'
+
+
+
 
 
 
