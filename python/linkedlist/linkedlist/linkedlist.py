@@ -2,12 +2,12 @@ class Node:
     def __init__(self,value) :
         self.value=value
         self.next=None
-        
+
 
 
 
 class LinkedList:
-    
+
     def __init__(self) :
         self.head=None
 
@@ -15,11 +15,11 @@ class LinkedList:
         node =Node(value)
 
         if not self.head:
-            self.head=node    
+            self.head=node
         else:
             node.next=self.head
             self.head=node
-        
+
 
     def includes(self,value):
         current=self.head
@@ -28,8 +28,8 @@ class LinkedList:
                return True
            current=current.next
         return False
-        
-    def to_string(self):
+
+    def __str__(self):
         content=''
         current = self.head
         while current:
@@ -39,19 +39,19 @@ class LinkedList:
         return content
 
 
-if __name__=='__main__':
-    ruba=LinkedList()
-    ruba.insert('ruba')
-    print(ruba.to_string())
-    
-    ruba.insert('kanaan')
-    print(ruba.to_string())
-    print(ruba.includes('ruba'))
-    print(ruba.includes('kanaan'))
-    print(ruba.includes('Hello'))
+# if __name__=='__main__':
+#     ruba=LinkedList()
+#     ruba.insert('ruba')
+#     print(ruba.to_string())
+
+#     ruba.insert('kanaan')
+#     print(ruba.to_string())
+#     print(ruba.includes('ruba'))
+#     print(ruba.includes('kanaan'))
+#     print(ruba.includes('Hello'))
 
 
 
 
-        
+
 

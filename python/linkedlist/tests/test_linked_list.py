@@ -19,14 +19,14 @@ def test_head():
     #      raise Exception('AttributeError')
     ruba = LinkedList()
     ruba.insert('ruba')
-    assert ruba.head.value 
+    assert ruba.head.value
 
 
 def test_multiple_insert():
     ruba = LinkedList()
     ruba.insert('ruba')
     ruba.insert('kanaan')
-    assert ruba.to_string() == '{kanaan} ->{ruba} ->Null'
+    assert str(ruba)== '{kanaan} ->{ruba} ->Null'
 
 
 def test_includes():
@@ -44,10 +44,10 @@ def test_to_string():
     ruba = LinkedList()
     ruba.insert('ruba')
     ruba.insert('kanaan')
-    assert ruba.to_string() == '{kanaan} ->{ruba} ->Null'
+    assert str(ruba) == '{kanaan} ->{ruba} ->Null'
 
 
 
 
-    
-   
+
+
