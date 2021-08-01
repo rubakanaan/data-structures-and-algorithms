@@ -1,11 +1,11 @@
 # Singly Linked List
-  
+
 - a linear data structure, in which the elements are not stored at contiguous memory locations. The elements in a linked list are linked using
-references 
+references
 - Singly linked list means that there is only one reference, and the reference points to the Next node in a linked list.
 
 ## Challenge:
- 
+
 ### Features
 
 ### Node
@@ -27,6 +27,17 @@ Linked List
     * Arguments: none
     * Returns: a string representing all the values in the Linked List, formatted as:
  "{ a } -> { b } -> { c } -> NULL"
+
+* append
+  * arguments: new value
+  * adds a new node with the given value to the end of the list
+* insert before
+  * arguments: value, new value
+  * adds a new node with the given new value immediately before the first node that has the value specified
+* insert after
+  * arguments: value, new value
+  * adds a new node with the given new value immediately after the first node that has the value specified
+
 
 
 
