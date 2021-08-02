@@ -9,7 +9,7 @@
 3|[Challenge 3](challenge3.md)
 4|[Challenge 4 ](linkedlist/README.md)
 5|[Challenge 5 ](linkedlist/linkedlist/linkedlist.py) / [Challenge 5 Test](linkedlist/tests/test_linked_list.py)
-6| [Challenge 6 ](linkedlist/linkedlist/linkedlist.py) / [Challenge 6 Test](linkedlist/tests/kth_test.py)
+6| [Challenge 7 ](linkedlist/linkedlist/linkedlist.py) / [Challenge 7 Test](linkedlist/tests/kth_test.py) / [Whiteboard](img/challenge7.jpg)
 7|
 8|
 9|
