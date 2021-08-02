@@ -58,6 +58,22 @@ class LinkedList:
            current=current.next
         return False
 
+    def kth_from_end(self,k):
+
+      current=self.head
+      lst=[]
+      while current:
+          lst.append(current.value)
+          current=current.next
+      rev=lst[::-1]
+      if k in range(len(rev)):
+        return int(rev[k])
+      elif k <0:
+        return 'K is a negative number'
+      else:
+        return "K is out of range"
+
+
 
     def __str__(self):
         content=''
@@ -73,10 +89,11 @@ class LinkedList:
 
 if __name__=='__main__':
     ruba=LinkedList()
-    ruba.insert('ruba')
-    ruba.insert_after('ruba','kanaan')
-    ruba.insert_after('ruba','J')
+    ruba.insert('1')
+    # ruba.insert_after('1','2')
+    # ruba.insert_after('2','3')
     print(str(ruba))
+    print(ruba.kth_from_end(0))
 
 
 
