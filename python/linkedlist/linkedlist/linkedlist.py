@@ -77,6 +77,19 @@ class LinkedList:
             current = current.next
         return int(current.value)
 
+    def zipLists(self, lst):
+        current = self.head
+        lst_curr = lst.head
+        while current != None and lst_curr != None:
+            curr_next = current.next
+            lst_next = lst_curr.next
+            lst_curr.next = curr_next
+            current.next = lst_curr
+            current = curr_next
+            lst_curr = lst_next
+            lst.head = lst_curr
+
+
 
 
     def __str__(self):
@@ -94,15 +107,10 @@ class LinkedList:
 if __name__=='__main__':
     ruba=LinkedList()
     ruba.insert('1')
-    ruba.insert_after('1','2')
-    ruba.insert_after('2','3')
-    print(str(ruba))
-    print(ruba.kth_from_end(0))
-
-
-
-
-
-
-
-
+    ruba.insert_after('1','3')
+    k=LinkedList()
+    k.insert('2')
+    k.insert_after('2','4')
+    k.insert_after('4','5')
+    ruba.zipLists(k)
+    print(ruba)
