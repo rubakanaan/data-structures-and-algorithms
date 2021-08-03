@@ -1,3 +1,6 @@
+from typing import Counter
+
+
 class Node:
     def __init__(self, value):
         self.value = value
@@ -58,20 +61,21 @@ class LinkedList:
            current=current.next
         return False
 
-    def kth_from_end(self,k):
+    def kth_from_end(self, k):
+        current = self.head
+        counter = -1
+        while current is not None:
+            current = current.next
+            counter += 1
 
-      current=self.head
-      lst=[]
-      while current:
-          lst.append(current.value)
-          current=current.next
-      rev=lst[::-1]
-      if k in range(len(rev)):
-        return int(rev[k])
-      elif k <0:
-        return 'K is a negative number'
-      else:
-        return "K is out of range"
+        if k > counter:
+            return ('K is out of range')
+        if k < 0:
+            return 'K is a negative number'
+        current = self.head
+        for i in range(0, counter - k):
+            current = current.next
+        return int(current.value)
 
 
 
@@ -90,10 +94,11 @@ class LinkedList:
 if __name__=='__main__':
     ruba=LinkedList()
     ruba.insert('1')
-    # ruba.insert_after('1','2')
-    # ruba.insert_after('2','3')
+    ruba.insert_after('1','2')
+    ruba.insert_after('2','3')
     print(str(ruba))
     print(ruba.kth_from_end(0))
+
 
 
 
