@@ -1,12 +1,20 @@
 # Stacks and Queues
-<!-- Short summary or background information -->
+
+* **Stack** : A collection of items in which only the most recently added item may be removed. The latest added item is at the top. Basic operations are push and pop.
+* **Queue**:   A collection of items in which only the earliest added item may be accessed. Basic operations are add (to the tail) or enqueue and delete (from the head) or dequeue.
+
+## PR:
+
+* https://github.com/rubakanaan/data-structures-and-algorithms/pull/24
 
 ## Challenge
 
 ### Node
+
   * Create a Node class that has properties for the value stored in the Node, and a pointer to the next node.
 
 ### Stack
+
   * Create a Stack class that has a top property. It creates an empty Stack when instantiated.
   * This object should be aware of a default empty value assigned to top when the stack is created.
 
