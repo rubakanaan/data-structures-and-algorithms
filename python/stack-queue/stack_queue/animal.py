@@ -19,7 +19,6 @@ class AnimalShelter:
 
 
   def dequeue (self,pref):
-
     if pref == "dog" or pref.lower() == "cat":
       if self.is_empty():
         raise Exception('The Shelter is empty.')
@@ -36,7 +35,6 @@ class AnimalShelter:
               current.next=current.next.next
             else:
               current=current.next
-
           return temp.value
     else:
       return "null"
