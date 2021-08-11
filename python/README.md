@@ -13,7 +13,7 @@
 7|[Challenge 8 ](linkedlist/linkedlist/zip_lists.py) / [Challenge 8 Test](linkedlist/tests/test_ziplist.py) / [Whiteboard](img/challenge8.jpg)
 8|[Challenge 11](stack-queue/stack_queue/pseudo.py)/ [Challenge 11 test](stack-queue/tests/test_pseudo.py) / [ Whiteboard](img/ch11.jpg)
 9|[Challenge 12](stack-queue/stack_queue/animal.py) /[Challenge 12 test](stack-queue/tests/test_animal.py)/ [whiteboard](img/ch12.jpg)
-10|
+10|[Challenge 13](stack-queue/stack_queue/bracket.py) / [Challenge 13 test](stack-queue/tests/test_brackets.py) / [ Whiteboard](img/ch13.jpg)
 11|
 12|
 13|
