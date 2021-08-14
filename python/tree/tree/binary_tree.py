@@ -88,12 +88,12 @@ class BST(BinaryTree):
         if root.right is None:
            return False
         else:
-          self.contains(root.right,value)
+         return self.contains(root.right,value)
       else:
         if root.left is None:
            return False
         else:
-          self.contains(root.left,value)
+         return self.contains(root.left,value)
 
 
 
@@ -133,10 +133,11 @@ if __name__ == "__main__":
   # b.add(b.root,2)
   # print(b)
   # # print(b.root.right.value)
-  # print(b.contains(b.root,8))
 
   b= BST()
   b.add(b.root,5)
   b.add(b.root,7)
   b.add(b.root,2)
   print(b.post_order(b.root))
+
+  print(b.contains(b.root,7))
