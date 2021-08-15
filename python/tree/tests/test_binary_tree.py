@@ -39,3 +39,14 @@ def test_post_order():
   b.add(b.root,7)
   b.add(b.root,2)
   assert b.post_order(b.root)== [2, 7, 5]
+
+
+def test_find_max():
+  bt = BinaryTree()
+  bt.root = Node(2)
+  bt.root.right = Node(5)
+  bt.root.left = Node(7)
+  bt.root.left.left = Node(2)
+  bt.root.left.right = Node(9)
+  bt.root.left.right.left = Node(5)
+  assert bt.find_max(bt.root) == 9

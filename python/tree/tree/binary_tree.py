@@ -39,6 +39,21 @@ class BinaryTree:
     self.post_arr.append(root.value)
     return self.post_arr
 
+  def find_max(self,root):
+    if root is None:
+      raise Exception('The Tree is empty.')
+    else :
+      max = root.value
+      if root.left is not None:
+        left = self.find_max(root.left)
+        if (left > max):
+            max = left
+      if root.right is not None:
+        right = self.find_max(root.right)
+        if (right > max):
+            max = right
+      return max
+
 
   def __str__(self):
     ls=self.pre_order(self.root)
@@ -111,19 +126,20 @@ class BST(BinaryTree):
 
 
 if __name__ == "__main__":
-  # bt = BinaryTree()
-  # bt.root = Node(2)
-  # bt.root.right = Node(5)
-  # bt.root.left = Node(7)
-  # bt.root.left.left = Node(2)
-  # bt.root.left.right = Node(6)
-  # bt.root.left.right.left = Node(5)
-  # bt.root.left.right.right = Node(11)
-  # bt.root.right.right = Node(9)
-  # bt.root.right.right.left = Node(4)
+  bt = BinaryTree()
+  bt.root = Node(2)
+  bt.root.right = Node(5)
+  bt.root.left = Node(7)
+  bt.root.left.left = Node(2)
+  bt.root.left.right = Node(6)
+  bt.root.left.right.left = Node(5)
+  bt.root.left.right.right = Node(11)
+  bt.root.right.right = Node(19)
+  bt.root.right.right.left = Node(4)
   # print(bt.pre_order(bt.root))
   # print(bt.in_order(bt.root))
   # print(bt.post_order(bt.root))
+  print(bt.find_max(bt.root))
 
   # b= BST()
   # b.add(b.root,5)
