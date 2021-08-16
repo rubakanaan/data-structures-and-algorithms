@@ -31,3 +31,9 @@ Common Terminology Node - A node is the individual item/data that make up the da
     * find maximum value
     * Arguments: none
     * Returns: number
+
+  * Breadth first
+    * Write a function called breadth first
+    * Arguments: tree
+    * Return: list of all values in the tree, in the order they were encountered
+

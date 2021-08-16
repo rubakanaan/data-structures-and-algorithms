@@ -1,4 +1,4 @@
-from tree.binary_tree import Node, BinaryTree, BST
+from tree.binary_tree import Node, BinaryTree, BST, breadth_first
 
 
 
@@ -50,3 +50,16 @@ def test_find_max():
   bt.root.left.right = Node(9)
   bt.root.left.right.left = Node(5)
   assert bt.find_max(bt.root) == 9
+
+def test_breadth_first():
+  bt = BinaryTree()
+  bt.root = Node(2)
+  bt.root.right = Node(5)
+  bt.root.left = Node(7)
+  bt.root.left.left = Node(2)
+  bt.root.left.right = Node(6)
+  bt.root.left.right.left = Node(5)
+  bt.root.left.right.right = Node(11)
+  bt.root.right.right = Node(9)
+  bt.root.right.right.left = Node(4)
+  assert breadth_first(bt.root) == [2, 7, 5, 2, 6, 9, 5, 11, 4]
