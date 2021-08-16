@@ -121,7 +121,24 @@ class BST(BinaryTree):
     return tree
 
 
+def breadth_first(root):
 
+    bfs=[]
+    temp=[root]
+    while temp:
+      curr = temp.pop(0)
+      if curr.left:
+        temp.append(curr.left)
+      if curr.right:
+        temp.append(curr.right)
+      bfs.append(curr.value)
+    return bfs
+
+
+def count_nodes(root):
+    if root is None:
+        return 0
+    return 1 + count_nodes(root.left) + count_nodes(root.right)
 
 
 
@@ -134,12 +151,18 @@ if __name__ == "__main__":
   bt.root.left.right = Node(6)
   bt.root.left.right.left = Node(5)
   bt.root.left.right.right = Node(11)
-  bt.root.right.right = Node(19)
+  bt.root.right.right = Node(9)
   bt.root.right.right.left = Node(4)
+  # print(count_nodes(bt.root))
+
+
+  print(breadth_first(bt.root))
+  # print(bfs)
+
   # print(bt.pre_order(bt.root))
   # print(bt.in_order(bt.root))
   # print(bt.post_order(bt.root))
-  print(bt.find_max(bt.root))
+
 
   # b= BST()
   # b.add(b.root,5)
@@ -150,10 +173,10 @@ if __name__ == "__main__":
   # print(b)
   # # print(b.root.right.value)
 
-  b= BST()
-  b.add(b.root,5)
-  b.add(b.root,7)
-  b.add(b.root,2)
-  print(b.post_order(b.root))
+  # b= BST()
+  # b.add(b.root,5)
+  # b.add(b.root,7)
+  # b.add(b.root,2)
+  # print(b.post_order(b.root))
 
-  print(b.contains(b.root,7))
+  # print(b.contains(b.root,7))

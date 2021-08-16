@@ -15,7 +15,7 @@
 9|[Challenge 12](stack-queue/stack_queue/animal.py) /[Challenge 12 test](stack-queue/tests/test_animal.py)/ [whiteboard](img/ch12.jpg)
 10|[Challenge 13](stack-queue/stack_queue/bracket.py) / [Challenge 13 test](stack-queue/tests/test_brackets.py) / [ Whiteboard](img/ch13.jpg)
 11|[Challeng 16](tree/tree/binary_tree.py) / [Challenge 16 test](tree/tests/test_binary_tree.py) / [Whiteboard](img/ch16.jpg)
-12|
+12|[Challeng 17](tree/tree/binary_tree.py) / [Challenge 17 test](tree/tests/test_binary_tree.py) / [Whiteboard](img/ch17.jpg)
 13|
 14|
 15|
