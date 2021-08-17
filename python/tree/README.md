@@ -37,3 +37,6 @@ Common Terminology Node - A node is the individual item/data that make up the da
     * Arguments: tree
     * Return: list of all values in the tree, in the order they were encountered
 
+  * fizz buzz tree
+    * Arguments: k-ary tree
+    * Return: new k-ary tree
