@@ -140,23 +140,42 @@ def count_nodes(root):
         return 0
     return 1 + count_nodes(root.left) + count_nodes(root.right)
 
+def  fizz_buzz_tree(root):
+
+  if root is None:
+      raise Exception('The Tree is empty.')
+  else:
+    if root.value % 3 == 0 and root.value % 5 == 0:
+      root.value='FizzBuzz'
+    elif root.value % 3 == 0:
+     root.value='Fizz'
+    elif root.value % 5 == 0:
+      root.value='Buzz'
+    else:
+      root.value=str(root.value)
+    if root.left:
+      fizz_buzz_tree(root.left)
+    if root.right:
+      fizz_buzz_tree(root.right)
+
+
+
+
 
 
 if __name__ == "__main__":
   bt = BinaryTree()
   bt.root = Node(2)
   bt.root.right = Node(5)
-  bt.root.left = Node(7)
-  bt.root.left.left = Node(2)
-  bt.root.left.right = Node(6)
-  bt.root.left.right.left = Node(5)
-  bt.root.left.right.right = Node(11)
-  bt.root.right.right = Node(9)
-  bt.root.right.right.left = Node(4)
+  bt.root.left = Node(3)
+  bt.root.left.left = Node(15)
+  # bt.root.left.right = Node(6)
+  # bt.root.left.right.left = Node(5)
+  # bt.root.left.right.right = Node(11)
+  # bt.root.right.right = Node(9)
+  # bt.root.right.right.left = Node(4)
   # print(count_nodes(bt.root))
 
-
-  print(breadth_first(bt.root))
   # print(bfs)
 
   # print(bt.pre_order(bt.root))
@@ -180,3 +199,6 @@ if __name__ == "__main__":
   # print(b.post_order(b.root))
 
   # print(b.contains(b.root,7))
+  fizz_buzz_tree(bt.root)
+  print(bt)
+
