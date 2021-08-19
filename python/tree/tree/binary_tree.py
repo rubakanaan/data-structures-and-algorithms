@@ -63,6 +63,7 @@ class BinaryTree:
     return tree
 
 
+
 class BST(BinaryTree):
   def __init__(self):
     super().__init__()
@@ -140,42 +141,38 @@ def count_nodes(root):
         return 0
     return 1 + count_nodes(root.left) + count_nodes(root.right)
 
-def  fizz_buzz_tree(root):
 
+
+def sum_of_odds(root):
+  sum=0
   if root is None:
-      raise Exception('The Tree is empty.')
-  else:
-    if root.value % 3 == 0 and root.value % 5 == 0:
-      root.value='FizzBuzz'
-    elif root.value % 3 == 0:
-     root.value='Fizz'
-    elif root.value % 5 == 0:
-      root.value='Buzz'
-    else:
-      root.value=str(root.value)
+    raise Exception('The Tree is empty.')
+  else :
+    if root.value %2 == 1:
+      sum+=root.value
     if root.left:
-      fizz_buzz_tree(root.left)
+     sum+= sum_of_odds(root.left)
     if root.right:
-      fizz_buzz_tree(root.right)
+     sum+= sum_of_odds(root.right)
+  return sum
 
 
 
 
-
-
-if __name__ == "__main__":
-  bt = BinaryTree()
-  bt.root = Node(2)
-  bt.root.right = Node(5)
-  bt.root.left = Node(3)
-  bt.root.left.left = Node(15)
+# if __name__ == "__main__":
+  # bt = BinaryTree()
+  # bt.root = Node(2)
+  # bt.root.right = Node(5)
+  # bt.root.left = Node(3)
+  # bt.root.left.left = Node(15)
   # bt.root.left.right = Node(6)
   # bt.root.left.right.left = Node(5)
   # bt.root.left.right.right = Node(11)
   # bt.root.right.right = Node(9)
   # bt.root.right.right.left = Node(4)
   # print(count_nodes(bt.root))
-
+  # print(bt)
+  # print(fizz_buzz_tree(bt))
   # print(bfs)
 
   # print(bt.pre_order(bt.root))
@@ -189,6 +186,7 @@ if __name__ == "__main__":
   # b.add(b.root,3)
   # b.add(b.root,7)
   # b.add(b.root,2)
+  # print(sum_of_odds(b.root))
   # print(b)
   # # print(b.root.right.value)
 
@@ -199,6 +197,6 @@ if __name__ == "__main__":
   # print(b.post_order(b.root))
 
   # print(b.contains(b.root,7))
-  fizz_buzz_tree(bt.root)
-  print(bt)
-
+  # fizz_buzz_tree(bt.root)
+  # print(bt)
+  # bt = Tree()
