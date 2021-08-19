@@ -1,4 +1,4 @@
-from tree.binary_tree import Node, BinaryTree, BST, breadth_first, fizz_buzz_tree
+from tree.binary_tree import Node, BinaryTree, BST, breadth_first
 
 
 
@@ -65,11 +65,3 @@ def test_breadth_first():
   assert breadth_first(bt.root) == [2, 7, 5, 2, 6, 9, 5, 11, 4]
 
 
-def test_fizz_buzz():
-  bt = BinaryTree()
-  bt.root = Node(2)
-  bt.root.right = Node(5)
-  bt.root.left = Node(3)
-  bt.root.left.left = Node(15)
-  fizz_buzz_tree(bt.root)
-  assert str(bt) ==  "2 Fizz FizzBuzz Buzz "
