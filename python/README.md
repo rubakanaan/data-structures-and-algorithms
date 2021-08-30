@@ -14,8 +14,8 @@
 8|[Challenge 11](stack-queue/stack_queue/pseudo.py)/ [Challenge 11 test](stack-queue/tests/test_pseudo.py) / [ Whiteboard](img/ch11.jpg)
 9|[Challenge 12](stack-queue/stack_queue/animal.py) /[Challenge 12 test](stack-queue/tests/test_animal.py)/ [whiteboard](img/ch12.jpg)
 10|[Challenge 13](stack-queue/stack_queue/bracket.py) / [Challenge 13 test](stack-queue/tests/test_brackets.py) / [ Whiteboard](img/ch13.jpg)
-11|[Challeng 16](tree/tree/binary_tree.py) / [Challenge 16 test](tree/tests/test_binary_tree.py) / [Whiteboard](img/ch16.jpg)
-12|[Challeng 17](tree/tree/binary_tree.py) / [Challenge 17 test](tree/tests/test_binary_tree.py) / [Whiteboard](img/ch17.jpg)
-13|[Challeng 18](tree/tree/k_arry_tree.py) / [Challenge 18 test](tree/tests/test_fizz_buzz.py) / [Whiteboard](img/ch18.jpg)
-14|[Challeng 26](insertion_sort/insertion_sort/insertion_sort.py) / [Challenge 26 test](insertion_sort/tests/test_insertion_sort.py) / [Whiteboard](img/ch26.jpg) / [Article](img/ch26article.jpg)
-15|
+11|[Challenge 16](tree/tree/binary_tree.py) / [Challenge 16 test](tree/tests/test_binary_tree.py) / [Whiteboard](img/ch16.jpg)
+12|[Challenge 17](tree/tree/binary_tree.py) / [Challenge 17 test](tree/tests/test_binary_tree.py) / [Whiteboard](img/ch17.jpg)
+13|[Challenge 18](tree/tree/k_arry_tree.py) / [Challenge 18 test](tree/tests/test_fizz_buzz.py) / [Whiteboard](img/ch18.jpg)
+14|[Challenge 26](insertion_sort/insertion_sort/insertion_sort.py) / [Challenge 26 test](insertion_sort/tests/test_insertion_sort.py) / [Whiteboard](img/ch26.jpg) / [Article](img/ch26article.jpg)
+15|[Challenge 27](sort/sort/merge_sort.py) / [Challenge 27 test](sort/tests/test_merge.py) / [Whiteboard](img/ch27.jpg) / [Article](img/ch27blog.jpg)
