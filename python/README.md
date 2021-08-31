@@ -19,3 +19,4 @@
 13|[Challenge 18](tree/tree/k_arry_tree.py) / [Challenge 18 test](tree/tests/test_fizz_buzz.py) / [Whiteboard](img/ch18.jpg)
 14|[Challenge 26](insertion_sort/insertion_sort/insertion_sort.py) / [Challenge 26 test](insertion_sort/tests/test_insertion_sort.py) / [Whiteboard](img/ch26.jpg) / [Article](img/ch26article.jpg)
 15|[Challenge 27](sort/sort/merge_sort.py) / [Challenge 27 test](sort/tests/test_merge.py) / [Whiteboard](img/ch27.jpg) / [Article](img/ch27blog.jpg)
+16|[Challenge 28](sort/sort/quick_sort.py) / [Challenge 28 test](sort/tests/test_quick.py) / [Whiteboard](img/ch28.jpg) / [Article](img/ch28article.jpg)
