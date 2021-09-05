@@ -94,7 +94,6 @@ class HashTable:
     return index
 
 
-
 if __name__ == "__main__":
   hash=HashTable()
   hash.add('1','Ruba')
