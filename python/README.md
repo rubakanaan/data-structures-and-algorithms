@@ -22,4 +22,5 @@
 16|[Challenge 28](sort/sort/quick_sort.py) / [Challenge 28 test](sort/tests/test_quick.py) / [Whiteboard](img/ch28.jpg) / [Article](img/ch28article.jpg)
 17|[Challenge 29](hash-table/hash_table/hash_table.py) / [Challenge 29 test](hash-table/tests/test_hashtable.py)
 18|[Challenge 31](hash-table/hash_table/repeated_word.py) / [Challenge 31 test](hash-table/tests/test_repeated_word.py) / [Whiteboard](img/ch31.jpg)
+19|[Challenge 32](hash-table/hash_table/intersection_tree.py) / [Challenge 32 test](hash-table/tests/test_intersection_tree.py) / [Whiteboard](img/ch32.jpg)
 
