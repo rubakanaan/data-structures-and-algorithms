@@ -103,4 +103,6 @@ if __name__ == "__main__":
   print(hash.get('22'))
   print(hash.contains('16'))
   print(hash.contains('1'))
-
+  for i in hash.bucket:
+    if i != None:
+      print ( i.head.value[0])
