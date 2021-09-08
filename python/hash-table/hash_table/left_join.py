@@ -3,10 +3,7 @@ from hash_table.hash_table import HashTable
 
 def left_join(hashtb1,hashtb2):
   result=[]
-  keys=[]
-  for key in hashtb1.bucket:
-    if key != None:
-      keys.append(key.head.value[0])
+  keys=hashtb1.__dict__().keys()
   for key in keys :
     if hashtb2.contains(key):
       result.append([key,hashtb1.get(key),hashtb2.get(key)])
