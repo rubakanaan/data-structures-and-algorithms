@@ -22,7 +22,7 @@ class LinkedList:
 class HashTable:
 
   def __init__(self,size=1024) -> None:
-      self.bucket=[None]* size
+      self._bucket=[None]* size
       self.size= size
 
   def add(self,key,value):
@@ -35,9 +35,9 @@ class HashTable:
 
     index = self.hash(key)
 
-    if self.bucket[index]== None:
-      self.bucket[index]=LinkedList()
-    self.bucket[index].insert([key,value])
+    if self._bucket[index]== None:
+      self._bucket[index]=LinkedList()
+    self._bucket[index].insert([key,value])
 
 
 
@@ -50,10 +50,10 @@ class HashTable:
     """
 
     index = self.hash(key)
-    if self.bucket[index]== None:
+    if self._bucket[index]== None:
       return None
     else:
-      current = self.bucket[index].head
+      current = self._bucket[index].head
       while current:
         if current.value[0] == key:
             return current.value[1]
@@ -69,10 +69,10 @@ class HashTable:
     """
 
     index = self.hash(key)
-    if self.bucket[index] == None:
+    if self._bucket[index] == None:
       return False
     else:
-      current = self.bucket[index].head
+      current = self._bucket[index].head
       while current:
         if current.value[0] == key:
             return True
@@ -93,6 +93,12 @@ class HashTable:
     index = value * 5 % self.size
     return index
 
+  def __dict__(self):
+    dct={}
+    for key in self._bucket:
+      if key != None:
+        dct[key.head.value[0]]=key.head.value[1]
+    return dct
 
 if __name__ == "__main__":
   hash=HashTable()
@@ -103,6 +109,3 @@ if __name__ == "__main__":
   print(hash.get('22'))
   print(hash.contains('16'))
   print(hash.contains('1'))
-  for i in hash.bucket:
-    if i != None:
-      print ( i.head.value[0])
