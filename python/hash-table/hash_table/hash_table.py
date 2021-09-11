@@ -100,12 +100,24 @@ class HashTable:
         dct[key.head.value[0]]=key.head.value[1]
     return dct
 
+
+def unique_char(string):
+  hash=HashTable()
+  for char in string:
+    if hash.contains(char.lower()):
+      return False
+    else:
+      if char != ' ':
+        hash.add(char.lower(),1)
+  return True
+
 if __name__ == "__main__":
   hash=HashTable()
-  hash.add('1','Ruba')
+  hash.add('1','1')
   hash.add('2', 'Kanaan')
-  print(hash.get('1'))
-  print(hash.get('2'))
-  print(hash.get('22'))
-  print(hash.contains('16'))
-  print(hash.contains('1'))
+  # print(hash.get('1'))
+  # print(hash.get('2'))
+  # print(hash.get('22'))
+  # print(hash.contains('16'))
+  # print(hash.contains('1'))
+  print (unique_char("Donald the duck"))
