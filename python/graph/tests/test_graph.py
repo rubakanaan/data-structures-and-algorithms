@@ -77,3 +77,39 @@ def test_one_vertex():
 def test_empty_graph():
   g=Graph()
   assert g.get_nodes() == None
+
+
+def test_breadth_first():
+  g=Graph()
+  v1=Vertex('Pandora')
+  v2=Vertex('Arendelle')
+  v3=Vertex('Metroville')
+  v4=Vertex('Monstroplolis')
+  v5=Vertex('Narnia')
+  v6=Vertex('Naboo')
+  g.add_vertex(v1)
+  g.add_vertex(v2)
+  g.add_vertex(v3)
+  g.add_vertex(v4)
+  g.add_vertex(v5)
+  g.add_vertex(v6)
+  g.add_edges(v1,v2,4)
+  g.add_edges(v2,v3,9)
+  g.add_edges(v2,v4,3)
+  g.add_edges(v3,v4,4)
+  g.add_edges(v3,v4,3)
+  g.add_edges(v3,v5,6)
+  g.add_edges(v4,v6,9)
+  g.add_edges(v6,v5,5)
+  actual = g.breadthFirst(v1)
+  expected = ['Pandora', 'Arendelle', 'Metroville', 'Monstroplolis', 'Narnia', 'Naboo']
+  assert actual == expected
+
+
+
+def test_breadthFirst():
+  g=Graph()
+  v1=Vertex('Pandora')
+  actual = g.breadthFirst(v1)
+  expected= None
+  assert actual==expected
