@@ -18,33 +18,41 @@ def test_add_edge():
 
 def test_get_nodes():
   g=Graph()
-  g.add_vertex(Vertex('1'))
-  g.add_vertex(Vertex('2'))
-  g.add_vertex(Vertex('3'))
-  g.add_vertex(Vertex('4'))
-  g.add_edges('1','2',4)
-  g.add_edges('1','3',9)
-  g.add_edges('1','4',3)
-  g.add_edges('2','1',4)
-  g.add_edges('3','1',3)
-  g.add_edges('3','4',6)
-  g.add_edges('4','1',9)
-  g.add_edges('4','2',5)
-  g.add_edges('4','3',6)
-  assert g.get_nodes()== ["1","2","3","4"]
+  v1=Vertex('1')
+  v2=Vertex('2')
+  v3=Vertex('3')
+  v4=Vertex('4')
+  v5=Vertex('5')
+  v6=Vertex('6')
+  g.add_vertex(v1)
+  g.add_vertex(v2)
+  g.add_vertex(v3)
+  g.add_vertex(v4)
+  g.add_vertex(v5)
+  g.add_vertex(v6)
+  g.add_edges(v1,v2,4)
+  g.add_edges(v2,v3,9)
+  g.add_edges(v2,v4,3)
+  g.add_edges(v3,v4,4)
+  g.add_edges(v3,v4,3)
+  g.add_edges(v3,v5,6)
+  g.add_edges(v4,v6,9)
+  g.add_edges(v6,v5,5)
+  assert g.get_nodes()== ["1","2","3","4","5","6"]
 
 
 def test_get_neighbors():
   g=Graph()
-  g.add_vertex(Vertex('1'))
-  g.add_vertex(Vertex('2'))
-  g.add_vertex(Vertex('3'))
-  g.add_vertex(Vertex('4'))
-  g.add_edges('1','2',4)
-  g.add_edges('1','3',9)
-  g.add_edges('1','4',3)
-  actual=g.get_neighbors("1")
-  expected= [['2', 4], ['3', 9], ['4', 3]]
+  v1=Vertex('1')
+  v2=Vertex('2')
+  v3=Vertex('3')
+  g.add_vertex(v1)
+  g.add_vertex(v2)
+  g.add_vertex(v3)
+  g.add_edges(v1,v2,4)
+  g.add_edges(v2,v3,9)
+  actual=g.get_neighbors(v1)
+  expected= [['2', 4]]
   assert actual== expected
 
 
@@ -60,10 +68,11 @@ def test_get_size():
 
 def test_one_vertex():
   g=Graph()
-  g.add_vertex(Vertex('1'))
-  g.add_edges('1','1',9)
+  v1=Vertex('1')
+  g.add_vertex(v1)
+  g.add_edges(v1,v1,9)
   assert g.get_nodes() == ["1"]
-  assert g.get_neighbors("1")== [['1',9]]
+  assert g.get_neighbors(v1)== [['1',9]]
 
 def test_empty_graph():
   g=Graph()

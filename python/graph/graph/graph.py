@@ -2,13 +2,18 @@ class Vertex:
   def __init__(self,value) -> None:
       self.value=value
 
+class Edge:
+
+  def __init__(self, vertex, weight=1):
+    self.vertex=vertex
+    self.weight=weight
+
 class Graph:
   def __init__(self):
     self._adjacency_list = {
-     # node: [edge1, edge2]
     }
 
-  def add_vertex(self, vertex: Vertex):
+  def add_vertex(self, vertex):
     """
     Adds a vertex to the graph
 
@@ -22,10 +27,10 @@ class Graph:
     Adds an edge to our graph
 
     """
-    if vertex1 in self._adjacency_list.keys():
-      if vertex2 in self._adjacency_list.keys():
-
-        self._adjacency_list[vertex1].append([vertex2,weight])
+    if vertex1.value in self._adjacency_list.keys():
+      if vertex2.value in self._adjacency_list.keys():
+        edge=Edge(vertex2,weight)
+        self._adjacency_list[vertex1.value].append([edge.vertex.value , edge.weight])
       else:
         print('Second vertex not exist.')
     else:
@@ -34,27 +39,28 @@ class Graph:
 
   def get_nodes(self):
     if len(list(self._adjacency_list.keys())) > 0:
-      return self._breadthFirst(list(self._adjacency_list.keys())[0])
+       return list(self._adjacency_list)
     else:
       return None
 
   def get_neighbors(self,vertex):
-    return self._adjacency_list[vertex]
+    return self._adjacency_list[vertex.value]
 
 
-  def _breadthFirst(self,vertex):
+  def breadthFirst(self,vertex):
     """
     Performs a level order traversal of the graph and calls action at each node
     """
-    if vertex not in self._adjacency_list.keys():
+    if vertex.value not in self._adjacency_list.keys():
       return None
 
     vertecies = []
-    breadth=[vertex]
+    breadth=[vertex.value]
     visited = []
-    visited.append(vertex)
+    visited.append(vertex.value)
     while len(breadth)!= 0:
       front= breadth.pop(0)
+      print (front)
       vertecies.append(front)
       for i in self._adjacency_list[front]:
         if i[0] not in visited :
@@ -77,21 +83,30 @@ class Graph:
 
 if __name__=='__main__':
   g=Graph()
-  g.add_vertex(Vertex('1'))
-  g.add_vertex(Vertex('2'))
-  g.add_vertex(Vertex('3'))
-  g.add_vertex(Vertex('4'))
-  g.add_edges('1','2',4)
-  g.add_edges('1','3',9)
-  g.add_edges('1','4',3)
-  g.add_edges('2','1',4)
-  g.add_edges('3','1',3)
-  g.add_edges('3','4',6)
-  g.add_edges('4','1',9)
-  g.add_edges('4','2',5)
-  g.add_edges('4','3',6)
-  # print(g._breadthFirst('1'))
+  v1=Vertex('Pandora')
+  v2=Vertex('Arendelle')
+  v3=Vertex('Metroville')
+  v4=Vertex('Monstroplolis')
+  v5=Vertex('Narnia')
+  v6=Vertex('Naboo')
+  g.add_vertex(v1)
+  g.add_vertex(v2)
+  g.add_vertex(v3)
+  g.add_vertex(v4)
+  g.add_vertex(v5)
+  g.add_vertex(v6)
+  g.add_edges(v1,v2,4)
+  g.add_edges(v2,v3,9)
+  g.add_edges(v2,v4,3)
+  g.add_edges(v3,v4,4)
+  g.add_edges(v3,v4,3)
+  g.add_edges(v3,v5,6)
+  g.add_edges(v4,v6,9)
+  g.add_edges(v6,v5,5)
+
+  print(g.breadthFirst(v1))
   # print (g.get_nodes())
-  print(g.get_neighbors('1'))
+  # print(g.get_neighbors(v1))
   # print(g.size())
+  # print(g._adjacency_list)
 
