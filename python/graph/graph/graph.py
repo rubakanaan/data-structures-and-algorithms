@@ -31,6 +31,8 @@ class Graph:
       if vertex2.value in self._adjacency_list.keys():
         edge=Edge(vertex2,weight)
         self._adjacency_list[vertex1.value].append([edge.vertex.value , edge.weight])
+        edge=Edge(vertex1,weight)
+        self._adjacency_list[vertex2.value].append([edge.vertex.value , edge.weight])
       else:
         print('Second vertex not exist.')
     else:
@@ -44,7 +46,7 @@ class Graph:
       return None
 
   def get_neighbors(self,vertex):
-    return self._adjacency_list[vertex.value]
+    return self._adjacency_list[vertex]
 
 
   def breadthFirst(self,vertex):
@@ -60,7 +62,6 @@ class Graph:
     visited.append(vertex.value)
     while len(breadth)!= 0:
       front= breadth.pop(0)
-      print (front)
       vertecies.append(front)
       for i in self._adjacency_list[front]:
         if i[0] not in visited :
@@ -80,6 +81,9 @@ class Graph:
 
   def to_adj_list(self):
     return self._adajacency_list
+
+
+
 
 if __name__=='__main__':
   g=Graph()

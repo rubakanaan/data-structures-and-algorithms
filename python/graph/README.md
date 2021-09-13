@@ -30,10 +30,19 @@ A set of items connected by edges. Each item is called a vertex or node. Formall
 
 ## Breadth-First Traversal of a Graph
 
-#### Challenge
+#### Challenge - Breadth-First-search
 
 * Write the following method for the Graph class:
   * breadth first
   * Arguments: Node
   * Return: A collection of nodes in the order they were visited.
   * Display the collection
+
+#### Challenge - Business-Trip
+
+* Write a function called business trip
+  * Arguments: graph, array of city names
+  * Return: cost or null
+* Approach & Efficiency
+  * Time Complexity : O(n^2)
+  * Space Complexity: O(1)

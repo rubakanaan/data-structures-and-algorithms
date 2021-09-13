@@ -51,7 +51,7 @@ def test_get_neighbors():
   g.add_vertex(v3)
   g.add_edges(v1,v2,4)
   g.add_edges(v2,v3,9)
-  actual=g.get_neighbors(v1)
+  actual=g.get_neighbors("1")
   expected= [['2', 4]]
   assert actual== expected
 
@@ -65,14 +65,6 @@ def test_get_size():
   actual = g.size()
   expected= 4
   assert actual==expected
-
-def test_one_vertex():
-  g=Graph()
-  v1=Vertex('1')
-  g.add_vertex(v1)
-  g.add_edges(v1,v1,9)
-  assert g.get_nodes() == ["1"]
-  assert g.get_neighbors(v1)== [['1',9]]
 
 def test_empty_graph():
   g=Graph()
