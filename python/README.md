@@ -25,3 +25,4 @@
 19|[Challenge 32](hash-table/hash_table/intersection_tree.py) / [Challenge 32 test](hash-table/tests/test_intersection_tree.py) / [Whiteboard](img/ch32.jpg)
 20|[Challenge 33](hash-table/hash_table/left_join.py) / [Challenge 33 test](hash-table/tests/test_left_join.py) / [Whiteboard](img/ch33.jpg)
 21|[Challenge 36](graph/graph/graph.py) / [Challenge 36 test](graph/tests/test_graph.py) / [Whiteboard](img/ch36.jpg)
+22|[Challenge 37](graph/graph/business_trip.py) / [Challenge 37 test](graph/tests/test_business_trip.py) / [Whiteboard](img/ch37.jpg)
