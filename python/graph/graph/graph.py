@@ -73,11 +73,25 @@ class Graph:
     return len(self._adjacency_list)
 
 
-  def _depthFirst(self, vertex):
+  def depthFirst(self, vertex):
     """
     Performs a depth first travesal of the graph and calls action at each node
     """
-    pass
+    if vertex.value not in self._adjacency_list.keys():
+      return None
+
+    vertecies = []
+    depth=[vertex.value]
+    visited = [vertex.value]
+    while len(depth)!= 0:
+      last= depth.pop()
+      vertecies.append(last)
+      for i in self._adjacency_list[last]:
+        if i[0] not in visited :
+          visited.append(i[0])
+          depth.append(i[0])
+    return vertecies
+
 
   def to_adj_list(self):
     return self._adajacency_list
@@ -87,28 +101,33 @@ class Graph:
 
 if __name__=='__main__':
   g=Graph()
-  v1=Vertex('Pandora')
-  v2=Vertex('Arendelle')
-  v3=Vertex('Metroville')
-  v4=Vertex('Monstroplolis')
-  v5=Vertex('Narnia')
-  v6=Vertex('Naboo')
+  v1=Vertex('a')
+  v2=Vertex('b')
+  v3=Vertex('d')
+  v4=Vertex('f')
+  v5=Vertex('h')
+  v6=Vertex('e')
+  v7=Vertex('c')
+  v8=Vertex('g')
   g.add_vertex(v1)
   g.add_vertex(v2)
   g.add_vertex(v3)
   g.add_vertex(v4)
   g.add_vertex(v5)
   g.add_vertex(v6)
-  g.add_edges(v1,v2,4)
-  g.add_edges(v2,v3,9)
-  g.add_edges(v2,v4,3)
-  g.add_edges(v3,v4,4)
+  g.add_vertex(v7)
+  g.add_vertex(v8)
+  g.add_edges(v1,v3,4)
+  g.add_edges(v1,v2,9)
+  g.add_edges(v2,v3,3)
+  g.add_edges(v2,v7,4)
   g.add_edges(v3,v4,3)
   g.add_edges(v3,v5,6)
-  g.add_edges(v4,v6,9)
-  g.add_edges(v6,v5,5)
+  g.add_edges(v3,v6,6)
+  g.add_edges(v4,v5,9)
+  g.add_edges(v7,v8,5)
 
-  print(g.breadthFirst(v1))
+  print(g.depthFirst(v1))
   # print (g.get_nodes())
   # print(g.get_neighbors(v1))
   # print(g.size())

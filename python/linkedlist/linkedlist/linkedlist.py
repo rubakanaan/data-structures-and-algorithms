@@ -108,12 +108,14 @@ if __name__=='__main__':
     # k.append('5')
 
     lnl=LinkedList()
-    lnl.insert('m')
-    lnl.append('o')
-    lnl.append('o')
+    lnl.insert('h')
+    lnl.append('i')
+    lnl.append('hi')
     lnl.append('m')
-    str(lnl)
-    print(isPalindrome(lnl))
+    print(str(lnl))
+
+
+
 
 
 
